@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNAHacker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <h1>DNAHacker</h1>
+
+    <section id="dataLoadingStatus">
+        <p>Loading interpretation data...</p>
+    </section>
+
+    <section>
+        <label for="dnaFileInput">Upload one or more MyHeritage ZIP files:</label>
+        <input type="file" id="dnaFileInput" accept=".zip,application/zip" multiple>
+    </section>
+
+    <section id="statusArea">
+        <p>Status: Waiting for file...</p>
+    </section>
+
+    <section id="resultsArea">
+        <h2>Results</h2>
+    </section>
+
+    <section id="comparisonArea" style="display: none;"> 
+        <h2>Compare Files</h2>
+        <div id="fileSelectionForComparison"></div>
+        <button id="compareButton">Compare Selected</button>
+        <div id="comparisonTableContainer"></div>
+    </section>
+
+    <footer>
+        <h2>Important Information and Disclaimer</h2>
+        <div id="disclaimerArea">
+            <p><strong>For informational and educational purposes only.</strong></p>
+            <p>This tool provides interpretations based on publicly available information (primarily from <a href="https://www.snpedia.com/" target="_blank">SNPedia</a>, used under CC BY-NC-SA 3.0 license) and current research. Results are not medical advice, diagnosis or treatment.</p>
+            <p><strong>Always consult a qualified healthcare provider</strong> (physician, genetic counselor) to understand your results in the context of your personal and family medical history.</p>
+            <p><strong>Privacy:</strong> All data is processed locally in your browser and is not sent to any server. You are responsible for how you use, store or share your results.</p>
+            <p><strong>Limitations:</strong> Results only indicate predispositions or associations, not diagnostic certainty. Genetic understanding evolves constantly, and interpretations may change. The relevance of SNPs may vary depending on ethnicity. This tool only analyzes a limited number of predefined SNPs.</p>
+            <p><strong>Attribution:</strong> SNP interpretations are derived from <a href="https://www.snpedia.com/" target="_blank">SNPedia</a> with some modifications and additions, used under the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA 3.0</a> license.</p>
+        </div>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

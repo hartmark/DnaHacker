@@ -1,0 +1,974 @@
+{
+  "snps": {
+    "rs4988235": {
+      "gene": "LCT",
+      "name": "Lactose Intolerance",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "if you are a caucasian who also has rs182549(C;C) there is 77% chance of lactose intolerance.",
+          "color": "red",
+          "magnitude": 2.5,
+          "related": "rs182549"
+        },
+        "CT": {
+          "description": "Approximately 80% of individuals with this genotype are able to digest milk (lactose) as adults.",
+          "color": "green",
+          "magnitude": 1.1
+        },
+        "TT": {
+          "description": "Can digest milk.",
+          "color": "green",
+          "magnitude": 1.1
+        }
+      }
+    },
+    "rs762551": {
+      "gene": "CYP1A2",
+      "name": "Caffeine Metabolism",
+      "interpretations": {
+        "AA": {
+          "description": "Highly inducible form of CYP1A2 enzyme. 1.6x faster caffeine metabolism in smokers. 1.4x faster caffeine metabolism in heavy coffee consumers (more than 3 cups).",
+          "magnitude": 1.5
+        },
+        "AC": {
+          "description": "Carrier of one CYP1A2*1F allele; Normal metabolism of caffeine.",
+          "magnitude": 0
+        },
+        "CC": {
+          "description": "Normal metabolism of caffeine.",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs671": {
+      "gene": "ALDH2",
+      "name": "Alcohol Flush ('Asian Flush')",
+      "interpretations": {
+        "AA": {
+          "description": "People with this genotype will experience the asian flush, a redness in the face when drinking alcohol. Unable to break down acetaldehyde, a toxic byproduct of alcohol and cigarette smoke. As a result, you are likely to have greatly increased odds of esophageal cancer, especially if you drink or smoke. It also causes worse hangovers. On the bright side, that makes you much less likely to become an alcoholic. If you become an alcoholic anyway, disulfiram (Antabuse) will not be an effective treatment.",
+          "color": "red",
+          "magnitude": 4.0
+        },
+        "AG": {
+          "description": "People with this genotype will experience the asian flush, a redness in the face when drinking alcohol. They can only break down acetaldehyde at half the normal speed, a toxic byproduct of alcohol and cigarette smoke. As a result, you are likely to have increased odds of esophageal cancer, especially if you drink or smoke. It also causes worse hangovers. On the bright side, that makes you less likely to become an alcoholic. If you become an alcoholic anyway, disulfiram (Antabuse) probably won't be an effective treatment.",
+          "color": "red",
+          "magnitude": 3.5
+        },
+        "GG": {
+          "description": "Two working copies of Aldehyde Dehydrogenase (ALDH2) mean you won't turn bright red when you drink alcohol, unlike most Asians. After your body turns alcohol into the dangerous acetaldehyde, this gene quickly turns the acetaldehyde into vinegar. It also stops the acetaldehyde in cigarettes from causing Esophageal Cancer. It reduces hangovers compared to Asians, but less hangovers and flushing obviously increases the risk of alcoholism. Alcoholism can be treated effectively with the drug Disulfiram (Antabuse) which would stop this gene from working and cause the Asian flush in non-Asians.",
+          "color": "green",
+          "magnitude": 2.0
+        }
+      }
+    },
+    "rs1801133": {
+      "gene": "MTHFR",
+      "name": "Folate Metabolism (C677T)",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "Normal folate metabolism and homocysteine levels.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "CT": {
+          "description": "Somewhat reduced (~65%) efficiency in folate processing.",
+          "color": "red",
+          "magnitude": 2.2
+        },
+        "TT": {
+          "description": "Significantly reduced (~10-20%) efficiency in folate processing, tends toward higher homocysteine, lower B12/folate. Associated with various health risks (see SNPedia).",
+          "color": "red",
+          "magnitude": 2.8
+        }
+      }
+    },
+    "rs429358": {
+      "gene": "APOE",
+      "name": "APOE SNP 1",
+      "interpretations": {}
+    },
+    "rs7412": {
+      "gene": "APOE",
+      "name": "APOE SNP 2",
+      "interpretations": {}
+    },
+    "rs4633": {
+      "gene": "COMT",
+      "name": "Endometrial cancer risk",
+      "interpretations": {
+        "CC": {
+          "description": "normal risk for endometrial cancer.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "CT": {
+          "description": "higher risk for endometrial cancer.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "higher risk for endometrial cancer.",
+          "color": "red",
+          "magnitude": 2
+        }
+      }
+    },
+    "rs4680": {
+      "gene": "COMT",
+      "name": "Dopamine/Stress (Val158Met)",
+      "interpretations": {
+        "AA": {
+          "description": "Worrier: Lower COMT activity, higher dopamine in prefrontal cortex. Advantage in memory/attention, but worse emotional control/stress management.",
+          "color": "green",
+          "magnitude": 2.5
+        },
+        "AG": {
+          "description": "Intermediate dopamine level and effects.",
+          "magnitude": 0
+        },
+        "GG": {
+          "description": "Warrior: Higher COMT activity, lower dopamine. Better stress resilience, higher pain threshold, but possibly slightly worse executive function under normal conditions.",
+          "color": "green",
+          "magnitude": 2.5
+        }
+      }
+    },
+    "rs3892097": {
+      "gene": "CYP2D6",
+      "name": "Drug Metabolism (CYP2D6*4)",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "CYP2D6 poor metabolizer. Affects many medications (e.g., antidepressants, tamoxifen, codeine). Increased risk of side effects or reduced efficacy depending on medication.",
+          "color": "red",
+          "magnitude": 3.0
+        },
+        "AG": {
+          "description": "Extensive metabolizer (usually)",
+          "magnitude": 0
+        },
+        "GG": {
+          "description": "Extensive metabolizer",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs1799853": {
+      "gene": "CYP2C9",
+      "name": "Warfarin/NSAID Metabolism (CYP2C9*2)",
+      "interpretations": {
+        "CC": {
+          "description": "No risk of altered warfarin metabolism or NSAID metabolism",
+          "color": "green",
+          "magnitude": 1.0
+        },
+        "CT": {
+          "description": "~20% reduction in warfarin metabolism; some NSAID risk",
+          "color": "red",
+          "magnitude": 1.5
+        },
+        "TT": {
+          "description": "~40% reduction in warfarin metabolism, greater NSAID risk",
+          "color": "red",
+          "magnitude": 2.0
+        }
+      }
+    },
+    "rs9939609": {
+      "gene": "FTO",
+      "name": "Obesity / Type 2 Diabetes Risk",
+      "interpretations": {
+        "AA": {
+          "description": "This genotype produces higher levels of the appetite-stimulating hormone ghrelin, increasing your risk of obesity and type-2 diabetes by roughly 60%.",
+          "color": "red",
+          "magnitude": 3.0
+        },
+        "AT": {
+          "description": "One copy of the genotype which increases production of the appetite stimulating hormone ghrelin. This increases your risk for obesity and Type-2 diabetes by approximately 20%.",
+          "color": "red",
+          "magnitude": 2.4
+        },
+        "TT": {
+          "description": "Lower risk of obesity and Type 2 Diabetes.",
+          "color": "green",
+          "magnitude": 1.5
+        }
+      }
+    },
+    "rs12913832": {
+      "gene": "HERC2",
+      "name": "Eye Color",
+      "interpretations": {
+        "AA": {
+          "description": "Brown eye color, 80% of the time",
+          "magnitude": 0
+        },
+        "AG": {
+          "description": "Brown eye color"
+        },
+        "GG": {
+          "description": "Blue eye color, 99% of the time",
+          "magnitude": 2.5
+        }
+      }
+    },
+    "rs10830963": {
+      "gene": "MTNR1B",
+      "name": "Diabetes type-2 risk - fasting plasma glucose",
+      "interpretations": {
+        "CC": {
+          "description": "Normal risk of Type-2 Diabetes",
+          "color": "green",
+          "magnitude": 0
+        },
+        "CG": {
+          "description": "Increased type-2 diabetes risk; higher gestational diabetes risk",
+          "color": "red",
+          "magnitude": 2.7
+        },
+        "GG": {
+          "description": "Increased type-2 diabetes risk; higher gestational diabetes risk",
+          "color": "green",
+          "magnitude": 3.1
+        }
+      }
+    },
+    "rs9340799": {
+      "gene": "ESR1",
+      "name": "Estrogen Sensitivity",
+      "interpretations": {
+        "AA": {
+          "description": "Men have zero risk, but can pass this on to their daughters. This is the normal version of Estrogen Receptor 1 (alpha). It has more cognitive decline than the rare version, with old women only remembering half as much details on the East Boston Memory Test immediate recall test.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "AG": {
+          "description": "Women have normal (lower) risk of Endometriosis, 0.75x lower risk of Endometrial Cancer, and normal (higher) risk of cognitive impairment.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "GG": {
+          "description": "Women have 10x risk of Endometriosis, but half the risk of Endometrial Cancer and 0.76x less cognitive impairment.",
+          "color": "red",
+          "magnitude": 3
+        }
+      }
+    },
+    "rs1800497": {
+      "gene": "ANKK1",
+      "name": "DRD2 Taq1A (Reward Deficiency)",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": " Better avoidance of errors. Normal OCD risk, normal Tardive Dyskinesia risk, lower ADHD risk. Less Alcohol dependence. Higher risk of Postoperative Nausea. Lower obesity. Bupropion is effective.",
+          "color": "green",
+          "magnitude": 3
+        },
+        "CT": {
+          "description": "A1/A2: Bad at avoidance of errors. 0.5x lower OCD risk, 0.87x lower Tardive Diskinesia risk, higher ADHD risk. More Alcohol Dependence. Lower risk of Postoperative Nausea. Increased obesity. Bupropion is not effective for smoking cessation.",
+          "color": "red",
+          "magnitude": 2.9
+        },
+        "TT": {
+          "description": "A1/A1: Bad at avoidance of errors. 0.25x lower OCD; 0.56x lower Tardive Diskinesia; higher ADHD; 1.4x Alcohol Dependence; lower Postoperative Nausea; Increased obesity; less pleasure response; Bupropion ineffective for smoking cessation.; 2.4x risk for adenoma recurrence.",
+          "color": "red",
+          "magnitude": 4
+        }
+      }
+    },
+    "rs662799": {
+      "gene": "APOA5",
+      "name": "Triglyceride Levels",
+      "interpretations": {
+        "AA": {
+          "description": "Normal triglyceride levels. Lower cardiovascular risk.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "AG": {
+          "description": "1.4x higher early heart attack risk; less weight gain on high fat diets.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "GG": {
+          "description": "2x higher early heart attack risk; less weight gain on high fat diets.",
+          "color": "red",
+          "magnitude": 2
+        }
+      }
+    },
+    "rs7903146": {
+      "gene": "TCF7L2",
+      "name": "Type 2 Diabetes Risk",
+      "interpretations": {
+        "CC": {
+          "description": "Normal (lower) risk of Type 2 Diabetes and Gestational Diabetes.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "CT": {
+          "description": "1.4x increased risk for diabetes (and perhaps colon cancer).",
+          "color": "red",
+          "magnitude": 2.1
+        },
+        "TT": {
+          "description": "2x increased risk for Type-2 diabetes.",
+          "color": "red",
+          "magnitude": 3.5
+        }
+      }
+    },
+    "rs12255372": {
+      "gene": "TCF7L2",
+      "name": "Type 2 Diabetes & Cancer Risk",
+      "interpretations": {
+        "GG": {
+          "description": "Normal risk of Type 2 Diabetes. Common genotype.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "GT": {
+          "description": "1.3x increased type-2 diabetes risk.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "slight increases (~1.5x) in risk for type-2 diabetes and possibly breast cancer and aggressive prostate cancer.",
+          "color": "red",
+          "magnitude": 2.2
+        }
+      }
+    },
+    "rs1799971": {
+      "gene": "OPRM1",
+      "name": "Opioid Sensitivity / Addiction Risk",
+      "interpretations": {
+        "AA": {
+          "description": "Normal opioid sensitivity. May require standard doses of pain medication.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "AG": {
+          "description": "Stronger cravings for alcohol. if alcoholic, naltrexone treatment 2x more successful.",
+          "color": "red",
+          "magnitude": 2.5
+        },
+        "GG": {
+          "description": "Significantly reduced opioid sensitivity. Heightened responses to social rejection. May require much higher doses of pain medication. Potentially reduced risk of addiction but higher risk of pain medication failure.",
+          "color": "red",
+          "magnitude": 2.6
+        }
+      }
+    },
+    "rs1333049": {
+      "gene": "9p21.3",
+      "name": "Coronary Artery Disease Risk",
+      "interpretations": {
+        "CC": {
+          "description": "1.9x increased risk for coronary artery disease.",
+          "color": "red",
+          "magnitude": 4
+        },
+        "CG": {
+          "description": "1.5x higher risk for coronary artery disease.",
+          "color": "red",
+          "magnitude": 3
+        },
+        "GG": {
+          "description": "Lower risk of coronary artery disease.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs1051730": {
+      "gene": "CHRNA3",
+      "name": "Nicotine Dependence / Lung Cancer",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "Less nicotine dependence. Also smokes each cigarette less deeply. Therefore there is a reduced risk of lung cancer and a reduced (0.8x) risk of Peripheral Artery Disease. This doesn't affect whether people start smoking though.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "CT": {
+          "description": "1.3x increased risk of lung cancer.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "1.8x increased risk of lung cancer; reduced response to alcohol, therefore possibly increased risk of alcohol abuse.",
+          "color": "red",
+          "magnitude": 2.5
+        }
+      }
+    },
+    "rs1042522": {
+      "gene": "TP53",
+      "name": "Cancer Risk (p53 Arg72Pro)",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "Live 3 years longer. Chemotherapy is more effective.",
+          "color": "green",
+          "magnitude": 3
+        },
+        "CG": {
+          "description": "Slightly increased lifespan?",
+          "color": "green",
+          "magnitude": 2
+        },
+        "GG": {
+          "description": "Common variant. Slightly shorter lifespan.",
+          "color": "red",
+          "magnitude": 2.0
+        }
+      }
+    },
+    "rs1545843": {
+      "gene": "LOC107984536",
+      "name": "Depression risk",
+      "interpretations": {
+        "AA": {
+          "description": "1.4x increased risk for depression (for those under 55).",
+          "color": "red",
+          "magnitude": 1.4
+        },
+        "AG": {
+          "description": "Normal risk.",
+          "magnitude": 0
+        },
+        "GG": {
+          "description": "Normal risk.",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs1801260": {
+      "gene": "CLOCK, TMEM165",
+      "name": "Circadian Rhythm (T3111C)",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "This is the rarer form of the CLOCK gene. In addition to possibly affecting evening preference, it has been linked to decreased Attention Deficit Hyperactivity Disorder symptoms.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "CT": {
+          "description": "This is one normal and one rare form of the CLOCK gene. In addition to possibly affecting evening preference, it has been linked to normal Attention Deficit Hyperactivity Disorder symptom scores.",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "This is the most common form of the CLOCK gene. In addition to possibly affecting evening preference, it has been linked to increased ADHD symptoms.",
+          "color": "red",
+          "magnitude": 1.8
+        }
+      }
+    },
+    "rs6265": {
+      "gene": "BDNF",
+      "name": "Brain-Derived Neurotrophic Factor (Val66Met)",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "Met/Met (higher risk) variant of the Val66Met SNP in the BDNF gene that codes for brain-derived neurotrophic factor. Met/Met is associated in some (but not all) studies with slightly increased susceptibility to certain mental health disorders such as ADHD and depression.",
+          "color": "red",
+          "magnitude": 2.6
+        },
+        "AG": {
+          "description": "Val/Met: Slightly increased risk for ADHD or depression; somewhat quicker mental decline in Alzheimer patients.",
+          "color": "red",
+          "magnitude": 2.6
+        },
+        "GG": {
+          "description": "Val/val (normal) variant of the Val66Met snp in the BDNF gene that codes for brain-derived neurotrophic factor.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs16969968": {
+      "gene": "CHRNA5",
+      "name": "Nicotine Dependence",
+      "interpretations": {
+        "AA": {
+          "description": "Higher risk for nicotine dependence, lower risk for cocaine dependence.",
+          "color": "red",
+          "magnitude": 3
+        },
+        "AG": {
+          "description": "Slightly higher risk for nicotine dependence, lower risk for cocaine dependence.",
+          "color": "red",
+          "magnitude": 2.5
+        },
+        "GG": {
+          "description": "Normal (lower) risk of nicotine dependence.",
+          "magnitude": 0 
+        }
+      }
+    },
+    "rs1229984": {
+      "gene": "ADH1B",
+      "name": "Alcohol Metabolism",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "0.56x decreased risk of oral/throat cancers.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "AG": {
+          "description": "0.56x decreased risk of oral/throat cancers.",
+          "color": "green",
+          "magnitude": 2
+        },
+        "GG": {
+          "description": "Normal oral/throat cancer risk; more frequent alcohol consumption.",
+          "magnitude": 1.1
+        }
+      }
+    },
+    "rs708272": {
+      "gene": "CETP",
+      "name": "HDL Cholesterol Levels (TaqIB)",
+      "orientation": "minus",
+      "interpretations": {
+        "CC": {
+          "description": "Small reduction in coronary heart disease risk from alcohol consumption.",
+          "magnitude": 2.1
+        },
+        "CT": {
+          "description": "Small reduction in heart disease risk from drinking alcohol.",
+          "magnitude": 2.1
+        },
+        "TT": {
+          "description": "B2B2 genotype; some reduction in heart disease risk from moderate alcohol consumption.",
+          "color": "green",
+          "magnitude": 2.2
+        }
+      }
+    },
+    "rs5751876": {
+      "gene": "ADORA2A",
+      "name": "Caffeine Sensitivity",
+      "interpretations": {
+        "CC": {
+          "description": "No effect on coffee sensitivity.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "CT": {
+          "description": "No effect on coffee sensitivity.",
+          "magnitude": 0
+        },
+        "TT": {
+          "description": "Significantly higher anxiety levels after moderate caffeine consumption.",
+          "color": "red",
+          "magnitude": 2.1
+        }
+      }
+    },
+    "rs6166": {
+      "gene": "FSHR",
+      "name": "Follicle Stimulating Hormone Receptor",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "Common/normal.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "AG": {
+          "description": "Normal risk."
+        },
+        "CT": {
+          "description": "Normal risk.",
+          "magnitude": 0
+        },
+        "GG": {
+          "description": "Females slightly more likely to be sterile.",
+          "color": "red",
+          "magnitude": 1
+        },
+        "TT": {
+          "description": "Normal risk.",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs727428": {
+      "gene": "SHBG",
+      "name": "Steroid hormone binding",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "SHBG levels are decreased approximately 27%, leading to less available testosterone nad estradiol"
+        },
+        "AG": {
+          "description": "SHBG levels are decreased approximately 13%, leading to less available testosterone nad estradiol"
+        },
+        "GG": {
+          "description": "Normal level of SHBG."
+        }
+      }
+    },
+    "rs9332964": {
+      "gene": "SRD5A2",
+      "name": "Micropenis",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "Micropenis",
+          "color": "red",
+          "magnitude": 4
+        },
+        "AG": {
+          "description": "Carrier for mutations linked to micropenis.",
+          "color": "red",
+          "magnitude": 2.5
+        },
+        "GG": {
+          "description": "Not linked to micropenis.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs1801131": {
+      "gene": "MTHFR",
+      "name": "Folate Metabolism (A1298C)",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "Normal MTHFR enzyme activity.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "AC": {
+          "description": "Possibly impaired folate metabolism.",
+          "color": "red",
+          "magnitude": 2.1
+        },
+        "CC": {
+          "description": "Number of risks. Complex.",
+          "color": "red",
+          "magnitude": 2.5
+        }
+      }
+    },
+    "rs4149056": {
+      "gene": "SLCO1B1",
+      "name": "Statin Metabolism",
+      "interpretations": {
+        "CC": {
+          "description": "17x myopathy risk for statin users.",
+          "color": "red",
+          "magnitude": 3.2
+        },
+        "CT": {
+          "description": "Reduced breakdown of some drugs; 5x increased myopathy risk for statin users.",
+          "color": "red",
+          "magnitude": 2.1
+        },
+        "TT": {
+          "description": "Normal SLCO1B1 function. Normal risk of statin-induced myopathy.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs6025": {
+      "gene": "F5",
+      "name": "Factor V Leiden",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "11.4x higher risk of thrombosis.",
+          "color": "red",
+          "magnitude": 7
+        },
+        "AG": {
+          "description": "3.5-4.4x risk of thrombosis.",
+          "color": "red",
+          "magnitude": 4.1
+        },
+        "GG": {
+          "description": "Normal risk of thrombosis",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs11591147": {
+      "gene": "PCSK9",
+      "name": "LDL Cholesterol Levels",
+      "interpretations": {
+        "GG": {
+          "description": "Normal PCSK9 function. Standard LDL cholesterol levels.",
+          "color": "red",
+          "magnitude": 0
+        },
+        "GT": {
+          "description": "2-3 fold lower risk of heart disease.",
+          "color": "green",
+          "magnitude": 3.5
+        },
+        "TT": {
+          "description": "2-3 fold lower risk of heart disease.",
+          "color": "green",
+          "magnitude": 4.5
+        }
+      }
+    },
+    "rs17782313": {
+      "gene": "MC4R",
+      "name": "Weight Regulation #1",
+      "interpretations": {
+        "CC": {
+          "description": "Adults likely to be 0.44 BMI units higher.",
+          "color": "red",
+          "magnitude": 2.5
+        },
+        "CT": {
+          "description": "Adults likely to be 0.22 BMI units higher.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "Normal (lower) risk of obesity related to this genetic variant.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs10871777": {
+      "gene": "MC4R",
+      "name": "Weight Regulation #2",
+      "interpretations": {
+        "AA": {
+          "description": "Normal (lower) risk of obesity related to this genetic variant.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "AG": {
+          "description": "Adults likely to be 0.22 BMI units higher.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "GG": {
+          "description": "Adults likely to be 0.44 BMI units higher.",
+          "color": "red",
+          "magnitude": 2.1
+        }
+      }
+    },
+    "rs10835638": {
+      "gene": "FSHB",
+      "name": "Testosterone level",
+      "interpretations": {
+        "GG": {
+          "description": "Normal Testosterone level.",
+          "magnitude": 0
+        },
+        "GT": {
+          "description": "Intermediate serum FSH level among males."
+        },
+        "TT": {
+          "description": "Lower serum FSH level among males."
+        }
+      }
+    },
+    "rs2070744": {
+      "gene": "NOS3",
+      "name": "Prostate cancer risk #1",
+      "interpretations": {
+        "CC": {
+          "description": "Increased prostate cancer risk.",
+          "color": "red",
+          "magnitude": 0.1
+        },
+        "CT": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant."
+        },
+        "TT": {
+          "description": "Cardiovascular differences.",
+          "color": "green",
+          "magnitude": 2.1
+        }
+      }
+    },
+    "rs721048": {
+      "gene": "EHBP1",
+      "name": "Prostate cancer risk #2",
+      "interpretations": {
+        "AA": {
+          "description": "Slightly increased prostate cancer risk.",
+          "color": "red",
+          "magnitude": 1.9
+        },
+        "AG": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant."
+        },
+        "GG": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "color": "green",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs13149290": {
+      "gene": "ZNF827",
+      "name": "Prostate cancer risk #3",
+      "interpretations": {
+        "CC": {
+          "description": "Slightly increased risk of developing prostate cancer.",
+          "color": "red",
+          "magnitude": 1.5
+        },
+        "CT": {
+          "description": "Slightly increased risk of developing prostate cancer.",
+          "color": "red",
+          "magnitude": 1.5
+        },
+        "TT": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "color": "green",
+          "magnitude": 1
+        }
+      }
+    },
+    "rs629242": {
+      "gene": "KIAA1211",
+      "name": "Prostate cancer risk #4",
+      "interpretations": {
+        "CC": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "color": "green",
+          "magnitude": 0
+        },
+        "CT": {
+          "description": "Somewhat higher risk for prostate cancer.",
+          "color": "red",
+          "magnitude": 2
+        },
+        "TT": {
+          "description": "Somewhat higher risk for prostate cancer.",
+          "color": "red",
+          "magnitude": 2.1
+        }
+      }
+    },
+    "rs1571801": {
+      "gene": "DAB2IP",
+      "name": "Prostate cancer risk #4",
+      "interpretations": {
+        "AA": {
+          "description": ">1.36x risk for prostate cancer.",
+          "color": "red",
+          "magnitude": 1.5
+        },
+        "AC": {
+          "description": "1.36x risk for prostate cancer."
+        },
+        "CC": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "magnitude": 0
+        },
+        "GG": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "magnitude": 0
+        }
+      }
+    },
+    "rs4054823": {
+      "gene": "-",
+      "name": "Aggressive prostate cancer risk",
+      "interpretations": {
+        "CC": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "magnitude": 0
+        },
+        "CT": {
+          "description": "Normal (lower) risk of prostate cancer related to this genetic variant.",
+          "magnitude": 0
+        },
+        "TT": {
+          "description": " The (T;T) genotype does not indicate a higher risk of prostate cancer. It indicates that those with prostate cancer have a 26% higher chance of having the aggressive form which requires more aggressive treatment.",
+          "color": "red",
+          "magnitude": 2
+        }
+      }
+    },
+    "rs6311": {
+      "gene": "HTR2A",
+      "name": "Sexual dysfunction risk on SSRI",
+      "interpretations": {
+        "CC": {
+          "description": " Selective Serotonin Reuptake Inhibitors, SSRI, (citalopram (Celexa), escitalopram (Lexapro), fluoxetine (Prozac), paroxetine (Paxil), or sertraline (Zoloft)) cause worse sexual dysfunction (a common side-effect) in people with this SNP. Note that research has shown Saffron is effective at reversing the sexual dysfunction from SSRI anti-depressants.",
+          "color": "red",
+          "magnitude": 3.0
+        },
+        "CT": {
+          "description": "Normal risk of sexual dysfunction when taking SSRI Antidepressants.",
+          "color": "green",
+          "magnitude": 2.0
+        },
+        "TT": {
+          "description": "Normal (lower) risk of sexual dysfunction when taking SSRI Antidepressants.",
+          "color": "green",
+          "magnitude": 2.0
+        }
+      }
+    }
+  },
+  "apoe": {
+    "T;T_T;T": {
+      "type": "ε2/ε2",
+      "risk": "Lowest Alzheimer's risk, but possibly higher cholesterol response to high-fat diet.",
+      "magnitude": 4
+    },
+    "T;T_C;T": {
+      "type": "ε2/ε3",
+      "risk": "Low Alzheimer's risk.",
+      "magnitude": 2
+    },
+    "T;T_C;C": {
+      "type": "ε3/ε3",
+      "risk": "Average/most common Alzheimer's risk.",
+      "magnitude": 2
+    },
+    "C;T_T;T": {
+      "type": "ε1/ε2 or ε2/ε4?",
+      "risk": "Unclear/rare.",
+      "magnitude": 2.5
+    },
+    "C;T_C;T": {
+      "type": "ε1/ε3 or ε2/ε4",
+      "risk": "Increased Alzheimer's risk (due to ε4).",
+      "magnitude": 2.6
+    },
+    "C;T_C;C": {
+      "type": "ε3/ε4",
+      "risk": "Increased Alzheimer's risk.",
+      "magnitude": 3
+    },
+    "C;C_T;T": {
+      "type": "ε1/ε1?",
+      "risk": "Extremely rare.",
+      "magnitude": 6
+    },
+    "C;C_C;T": {
+      "type": "ε1/ε4?",
+      "risk": "Rare, increased Alzheimer's risk.",
+      "magnitude": 2.5
+    },
+    "C;C_C;C": {
+      "type": "ε4/ε4",
+      "risk": "Significantly increased (~11-15x) Alzheimer's risk, possibly increased heart disease risk.",
+      "magnitude": 6
+    }
+  }
+}

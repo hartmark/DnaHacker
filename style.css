@@ -1,0 +1,360 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+
+/* Status area */
+#statusArea {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #6c757d;
+}
+
+/* File input */
+input[type="file"] {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-table .highlight-diff td {
+    background-color: #fff9c4;
+}
+
+/* Sortable columns */
+th.sortable {
+    cursor: pointer;
+    position: relative;
+    padding-right: 18px;
+}
+
+th.sortable:after {
+    content: '↕️';
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+th.sort-asc:after {
+    content: '↑';
+    opacity: 1;
+}
+
+th.sort-desc:after {
+    content: '↓';
+    opacity: 1;
+}
+
+/* Impact column styling */
+.impact-cell {
+    white-space: nowrap;
+}
+
+.color-text {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+/* SNP Color Coding */
+.color-badge {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.color-badge.red {
+    background-color: #ea5455;
+}
+
+.color-badge.green {
+    background-color: #28a745;
+}
+
+/* SNP Magnitude Styling */
+.medium-magnitude {
+    border-left: 4px solid #f8bb86; /* yellow warning */
+    position: relative;
+}
+
+.high-magnitude {
+    border-left: 4px solid #ea5455; /* red warning */
+    position: relative;
+}
+
+/* Magnitude Circle */
+.magnitude-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.magnitude-circle.none {
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.magnitude-circle.low {
+    background-color: #28a745; /* Green */
+}
+
+.magnitude-circle.medium {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+
+.magnitude-circle.high {
+    background-color: #dc3545; /* Red */
+}
+
+.magnitude-circle.has-tooltip {
+    cursor: help;
+}
+
+.magnitude-circle .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -120px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: normal;
+}
+
+.magnitude-circle .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.magnitude-circle:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.magnitude-circle-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.magnitude-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: #666;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #f0f0f0;
+}
+
+.magnitude-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -120px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: normal;
+}
+
+.magnitude-tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.magnitude-tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.magnitude-value {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Compare section */
+#comparisonArea {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+#fileSelectionForComparison {
+    margin-bottom: 15px;
+}
+
+.checkbox-container {
+    margin: 8px 0;
+}
+
+#compareButton {
+    padding: 8px 16px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#compareButton:hover {
+    background-color: #3367d6;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+#disclaimerArea {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #f8bb86;
+}
+
+#dataLoadingStatus {
+    margin: 10px 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#dataLoadingStatus .success {
+    color: #155724;
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 8px;
+}
+
+#dataLoadingStatus .error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 8px;
+}
+
+/* Legend for color coding */
+.results-legend {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 0.9em;
+}
+
+.legend-item {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.legend-note {
+    font-style: italic;
+    margin-top: 8px;
+    color: #666;
+}
+
+.circle-demo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* For table cells with values that differ between files */
+.diff-value {
+    background-color: #fff3cd;
+    font-weight: bold;
+}
