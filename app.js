@@ -1,6 +1,6 @@
 import { processZipFile } from './fileProcessor.js';
 import { analyzeSnps } from './snpParser.js';
-import { updateStatus, displayResults, setupComparisonUI } from './uiManager.js';
+import UIManager from './uiManager.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const fileInput = document.getElementById('dnaFileInput');
@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     fileInput.addEventListener('change', (event) => {
         const files = event.target.files;
         if (!files.length) {
-            updateStatus("No files selected.");
+            UIManager.updateStatus("No files selected.");
             return;
         }
 
-        updateStatus(`Found ${files.length} file(s). Processing...`);
+        UIManager.updateStatus(`Found ${files.length} file(s). Processing...`);
         processedFilesData.clear();
         document.getElementById('resultsArea').innerHTML = '<h2>Results</h2>';
         document.getElementById('comparisonArea').style.display = 'none';
@@ -45,33 +45,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         for (const file of files) {
             if (file.type === 'application/zip' || file.name.toLowerCase().endsWith('.zip')) {
-                updateStatus(`Starting to process: ${file.name}`);
+                UIManager.updateStatus(`Starting to process: ${file.name}`);
                 filePromises.push(
                     processZipFile(file)
                         .then(results => {
                             if (results) {
                                 processedFilesData.set(file.name, results);
-                                displayResults(results, file.name);
+                                UIManager.displayResults(results, file.name);
                             }
                         })
                         .catch(error => {
                             console.error("Error processing file:", file.name, error);
-                            updateStatus(`Error processing ${file.name}: ${error.message}`, true);
+                            UIManager.updateStatus(`Error processing ${file.name}: ${error.message}`, true);
                         })
                 );
             } else {
-                updateStatus(`Invalid file type for ${file.name}. Only ZIP files are accepted.`, true);
+                UIManager.updateStatus(`Invalid file type for ${file.name}. Only ZIP files are accepted.`, true);
             }
         }
 
         Promise.allSettled(filePromises).then(() => {
-            updateStatus("Processing complete for all selected files.");
+            UIManager.updateStatus("Processing complete for all selected files.");
             if (processedFilesData.size > 1) {
-                setupComparisonUI(processedFilesData);
+                UIManager.setupComparisonUI(processedFilesData);
             }
         });
     });
 
-    // Initial status
-    updateStatus("Waiting for file...");
+    UIManager.updateStatus("Waiting for file...");
+    UIManager.setupPdfExport();
 });

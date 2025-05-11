@@ -21,8 +21,10 @@ let apoeLookup = {};
 async function loadSnpData() {
     try {
         const response = await fetch('snpData.json');
+        
         if (!response.ok) {
-            throw new Error(`Failed to load SNP data: ${response.status} ${response.statusText}`);
+            console.error(`Failed to load SNP data: ${response.status} ${response.statusText}`);
+            return false;
         }
         
         const data = await response.json();
@@ -311,7 +313,7 @@ export async function analyzeSnps(parsedData) {
         const sortedGenotype = sortGenotype(flippedGenotype);
         
         // Log additional information if available
-        logGenotypeInfo(snpInfo, sortedGenotype, rsId);
+        logGenotypeInfo(snpInfo, sortedGenotype);
         
         // Store all versions for later use
         foundSnpsRaw[rsId] = {
@@ -357,9 +359,8 @@ export async function analyzeSnps(parsedData) {
  * Logs additional genotype information if available
  * @param {Object} snpInfo - The SNP information
  * @param {string} sortedGenotype - The sorted genotype
- * @param {string} rsId - The SNP rsId
  */
-function logGenotypeInfo(snpInfo, sortedGenotype, rsId) {
+function logGenotypeInfo(snpInfo, sortedGenotype) {
     if (!snpInfo?.interpretations?.[sortedGenotype]) return;
     
     const genotypeInfo = snpInfo.interpretations[sortedGenotype];

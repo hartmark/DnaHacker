@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNAHacker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script></head>
 <body>
     <h1>DNAHacker</h1>
     <div class="github-badge">
@@ -30,6 +31,9 @@
 
     <section id="resultsArea">
         <h2>Results</h2>
+        <div id="exportControls" style="display: none;">
+            <button id="exportPdfButton" class="action-button">Export to PDF</button>
+        </div>
     </section>
 
     <section id="comparisonArea" style="display: none;"> 
@@ -51,6 +55,6 @@
         </div>
     </footer>
 
-    <script src="app.js" type="module"></script>
+    <script src="./app.js" type="module"></script>
 </body>
 </html>
