@@ -9,6 +9,22 @@ This tool helps analyze DNA data by identifying important genetic variations (SN
 ## Privacy Note
 Even when running locally, DNAHacker processes all data entirely within your browser. Your genetic data never leaves your computer, regardless of whether you're using the GitHub Pages version or running locally.
 
+## QuickStart
+
+Don't want to install anything? Try DNAHacker directly in your browser:
+
+[**Launch DNAHacker Online**](https://hartmark.github.io/DnaHacker/)
+
+This version is hosted on GitHub Pages and offers the same functionality as the local version. Your data remains private and is processed entirely in your browser - nothing is uploaded to any server.
+
+Simply visit the link above to:
+- Upload your DNA file
+- Analyze specific genetic markers
+- Get personalized interpretations
+- Explore your genetic traits
+
+No installation required!
+
 ## Features
 
 - **SNP Data Loading**: Loads target SNP definitions from a JSON file
