@@ -58,18 +58,18 @@ The module uses SNPedia's magnitude scale for interpreting significance:
 
 ### Currently Supported Formats
 
-**This tool supports DNA kits downloaded from MyHeritage and Ancestry.com in ZIP format.**
+**This tool supports DNA kits downloaded from MyHeritage, Ancestry.com and 23andMe in ZIP format.**
 
 - **MyHeritage**: ZIP file containing a CSV file with genetic data
 - **Ancestry.com**: ZIP file containing a TXT file with genetic data
+- **23andMe**: ZIP file containing a TXT file with genetic data
 
-When you download your raw DNA data from MyHeritage or Ancestry.com, you receive a ZIP file containing a file with your genetic data. This tool is specifically designed to detect which file type and process the correct format.
+When you download your raw DNA data from MyHeritage, Ancestry.com or 23andMe, you receive a ZIP file containing a file with your genetic data. This tool is specifically designed to detect which file type and process the correct format.
 
 ### Contributing Support for Other Formats
 
 We welcome Pull Requests that add support for additional DNA testing services! Popular DNA testing platforms that could be added include:
 
-- **23andMe** (.txt format)
 - **FamilyTreeDNA** (.csv format)
 - **Living DNA** (.txt format)
 - **GEDmatch** (various formats)

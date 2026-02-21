@@ -4,7 +4,7 @@ import UIManager from './uiManager.js';
 /**
  * Normalizes data from different DNA file formats to a common format
  * @param {Array} parsedData - The parsed data from PapaParse
- * @param {string} format - The detected format ('myheritage' or 'ancestry')
+ * @param {string} format - The detected format ('myheritage', 'ancestry' or '23andme')
  * @returns {Array} Normalized data in the format expected by analyzeSnps
  */
 function normalizeData(parsedData, format) {
@@ -44,6 +44,14 @@ function normalizeData(parsedData, format) {
             } else {
                 continue; // Skip invalid rows
             }
+        } else if (format === '23andme') {
+            // 23andMe format: rsid, chromosome, position, genotype
+            if (!Array.isArray(row) || row.length < 4) continue;
+
+            rsid = String(row[0]).trim();
+            chromosome = String(row[1]).trim();
+            position = String(row[2]).trim();
+            genotype = String(row[3]).trim();        
         } else {
             continue; // Skip unknown formats
         }
@@ -124,6 +132,10 @@ export function parseDnaData(fileString, fileIdentifier, format = 'myheritage') 
             // Ancestry uses tab separation and has headers
             parseConfig.delimiter = '\t';
             parseConfig.header = true;
+        } else if (format === '23andme') {
+            // 23andme uses tab separation and has headers but we will not use them
+            parseConfig.delimiter = '\t';
+            parseConfig.header = false;
         } else {
             // MyHeritage uses comma separation and no headers
             parseConfig.delimiter = ',';

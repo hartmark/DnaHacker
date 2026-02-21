@@ -5,7 +5,7 @@ import UIManager from './uiManager.js';
 /**
  * Detects the DNA file format based on content analysis
  * @param {string} content - The file content
- * @returns {string} The detected format ('myheritage', 'ancestry', or 'unknown')
+ * @returns {string} The detected format ('myheritage', 'ancestry', '23andme' or 'unknown')
  */
 function detectFileFormat(content) {
     const lines = content.split('\n');
@@ -42,6 +42,16 @@ function detectFileFormat(content) {
                 col3Length: columns[3].length
             });
         }
+    }
+
+    // Look for 23andMe specific marker and file format
+    if (
+        content.includes('23andMe') &&
+        lines.some(line =>
+            line.startsWith('# rsid\tchromosome\tposition\tgenotype')
+        )
+    ) {
+        return '23andme';
     }
 
     return 'unknown';
