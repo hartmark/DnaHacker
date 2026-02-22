@@ -506,7 +506,7 @@
         },
         "GG": {
           "description": "Normal (lower) risk of nicotine dependence.",
-          "magnitude": 0 
+          "magnitude": 0
         }
       }
     },
@@ -920,6 +920,28 @@
           "description": "Normal (lower) risk of sexual dysfunction when taking SSRI Antidepressants.",
           "color": "green",
           "magnitude": 2.0
+        }
+      }
+    },
+    "rs2187668": {
+      "gene": "HLA-DRB1",
+      "name": "Autoimmune Disorder Risk",
+      "orientation": "minus",
+      "interpretations": {
+        "AA": {
+          "description": "Autoimmune disorder risk (lupus, celiac disease) due to 2 HLA-DRB1*0301 alleles",
+          "color": "red",
+          "magnitude": 3.0
+        },
+        "AG": {
+          "description": "Somewhat increased autoimmune disorder (lupus, celiac disease) risk; 1 HLA-DRB1*0301 allele",
+          "color": "red",
+          "magnitude": 2.1
+        },
+        "GG": {
+          "description": "Average risk",
+          "color": "green",
+          "magnitude": 0
         }
       }
     }
