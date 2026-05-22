@@ -1,4 +1,4 @@
-import { unzip } from 'https://unpkg.com/unzipit@1.4.0/dist/unzipit.module.js';
+import { unzip } from './vendor/unzipit.module.js';
 import { parseDnaData } from './csvParser.js';
 import UIManager from './uiManager.js';
 
